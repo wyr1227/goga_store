@@ -1,0 +1,79 @@
+@font-color-main: #333;
+@font-color-sub: #888;
+@font-color-highLight: #00BFBF;
+@bg-color-main: #fff;
+
+.g-layerWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 500;
+}
+
+.f-bw {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.m-confirm {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 2px;
+  .confirm-mainWrap {
+    padding: 30/75rem;
+  }
+  .confirm-icnWrap {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .confirm-titleWrap {
+    .title {
+      margin: 0;
+      line-height: 24px;
+      color: @font-color-main;
+      font-size: 40/75rem;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+  .confirm-ctnWrap {
+    padding: 12px 0 0 0;
+    .ctn {
+      margin: 0;
+      line-height: 1.5;
+      color: @font-color-sub;
+      font-size: 30/75rem;
+      text-align: center;
+    }
+  }
+  .confirm-btnWrap {
+    font-size: 0;
+    .btn {
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      text-align: center;
+      font-size: 28/75rem;
+      line-height: 1.1em;
+      color: @font-color-highLight;
+      display: inline-block;
+      box-sizing: border-box;
+      &.btn-half {
+        width: 50%;
+      }
+      &.btn-sub {
+        color: @font-color-main;
+      }
+    }
+  }
+}

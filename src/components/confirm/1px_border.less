@@ -1,0 +1,57 @@
+@border-color-main: #ddd;
+
+/*retain 1px border start*/
+.retainbt, .retainbb, .retainbl, .retainbr, .retainb {
+  position: relative !important
+}
+
+.retainbt:before, .retainbb:after {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  height: 1px;
+  max-height: 1px;
+  background: @border-color-main;
+  left: 0;
+  right: 0
+}
+
+.retainbt:before {
+  top: 0
+}
+
+.retainbb:after {
+  bottom: 0
+}
+
+.retainbl:before, .retainbr:after {
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  width: 1px;
+  max-width: 1px;
+  background: @border-color-main;
+  top: 0;
+  bottom: 0
+}
+
+.retainbl:before {
+  left: 0
+}
+
+.retainbr:after {
+  right: 0
+}
+
+.retainb:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1px solid @border-color-main;
+  pointer-events: none
+}

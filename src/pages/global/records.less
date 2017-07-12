@@ -1,0 +1,87 @@
+.calendar{
+  background-color: #fff;
+  padding-bottom: 30/75rem;
+  .top-handle{
+    height: 88/75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10/75rem ;
+    background: #ffb230;
+    .box-lr{
+      width: 85/75rem;
+      height: 85/75rem;
+      fill: #fff;
+    }
+    .p-title{
+      color: #fff;
+      font-size: 32/75rem;
+    }
+  }
+  .week{
+    display: flex;
+    font-size: 34/75rem;
+    height: 114/75rem;
+    align-items: center;
+    span{
+      flex: 1;
+      text-align: center;
+      color: #ffb230;
+    }
+  }
+  .days {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .day{
+      text-align: center;
+      width: 10/7rem;
+      height: 10/7rem;
+      text-align: center;
+      font-size: 32/75rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      span{
+        display: block;
+        width: 88/75rem;
+        height: 88/75rem;
+        text-align: center;
+        line-height:88/75rem;
+      }
+      &.has {
+        span {
+          position: relative;
+          &:before {
+            content: '';
+            width: 16/75rem;
+            height: 16/75rem;
+            position: absolute;
+            top: 64/75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffb230;
+            border-radius: 50%;
+          }
+        }
+      }
+      &.today{
+        span{
+          background: #ffb230;
+          border-radius: 50%;
+          color: #fff;
+        }
+        &.has {
+          span{
+            &:after{
+              background-color: #fff;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
